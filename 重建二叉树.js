@@ -17,7 +17,7 @@ function reConstructBinaryTree(pre, vin)
     var right = vin.slice(index+1);
     return{
         val : pre[0],
-        left: reConstructBinaryTree(pre.slice(1,index),left),
+        left: reConstructBinaryTree(pre.slice(1,index+1),left),
         right: reConstructBinaryTree(pre.slice(index+1),right)
     };
 }
